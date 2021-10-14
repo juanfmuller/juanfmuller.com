@@ -1,0 +1,57 @@
+{% extends 'root.html' %}
+{% load static %}
+
+{% block page_title %}Projects | Xilinx | Juan Muller{% endblock %}
+{% block page_og_title %}Projects | Xilinx | Juan Muller{% endblock %}
+{% block page_description %}Xilinx is a computer software to design circuits using an interface or code. In this project I took advantage of both, go on to read how.{% endblock %}
+
+{% block extra_head %}
+  <link rel="stylesheet" href="{% static 'projects/css/projects-master.css' %}">
+{% endblock %}
+
+{% block header %}
+{% endblock %}
+
+{% block main%}
+  <div class="title-wrap">
+    <section class="headline">
+      <h3>PROJECT</h3>
+      <h1>Xilinx -- digital circuit design</h1>
+
+      <h3>MY ROLE</h3>
+      <h2>Circuit designer</h2>
+
+      <h3>TOOLS USED</h3>
+      <h2>Xilinx</h2>
+      <h2>Verilog</h2>
+
+      <h3>DATE</h3>
+      <h2>April 2020</h2>
+    </section>
+    <section class="description">
+      <p class="slide-in">As en electrical engineer, my role is heavily focused on circuit design. I have decided to concentrate on computer engineering which focuses more on 
+        digital circuit design. A very useful tool is Xilinx, which allows for the design and testing of a digital circuit. This project is a digital design which I then tested
+        using Verilog code. 
+      </p>
+      <p class="slide-in">Here, I designed a four bit register from bare flip flops. First, I created a standard register providing four outputs with four inputs. Using multiplexers
+        I was able to design the multifunctional register, meaning it could hold, load, shift left, and shift right. To finally test the register, I made a verilog test fixture.
+      </p>
+      <p class="slide-in">
+        This project allowed me to get a better understanding of hardware is designed and tested. I also learned how to use Xilinx to prototype circuits, more specifically standard
+        and multifunctional registers.
+      </p>
+    </section>
+  </div>
+  <section class="images">
+    <img src="{% static 'projects/img/xilinx-final-circuit.PNG' %}" alt="xilinx-final-circuit">
+    <div class="mobile">
+      <img src="{% static 'projects/img/xilinx-register.PNG' %}" alt="xilinx-register">
+      <img src="{% static 'projects/img/xilinx-symbol.PNG' %}" alt="xilinx-symbol">
+    </div>
+    <img src="{% static 'projects/img/xilinx-results.PNG' %}" alt="xilinx-results">
+  </section>
+  <section class="contact-me projects slide-in">
+    <h2>Want to see more?</h2>
+    <h1><a href="{% url 'swlatinx' %}">Next project &#8594;</a></h1>
+  </section>
+{% endblock %}

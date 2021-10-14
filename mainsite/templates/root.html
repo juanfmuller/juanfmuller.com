@@ -1,0 +1,107 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% block page_title %}{% endblock %}</title>
+  <meta property="og:title" content="{% block page_og_title %}{% endblock %}"/>
+  <meta property="og:description" content="{% block page_description %}{% endblock %}"/>
+  <meta property="og:image" content="{% static 'img/meta-image.jpg' %}"/>
+  <link rel="stylesheet" href="{% static 'css/master.css' %}">
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/x-icon" href="{% static 'img/favicon.ico' %}">
+  {% block extra_head %}{% endblock %}
+</head>
+<body>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="{% static 'js/jquery.visible.js' %}" type="text/javascript"></script>
+  <script src="{% static 'js/jquery.scrollIntoView.js' %}" type="text/javascript"></script>
+  <div class="loading-screen">
+    <div class="loading-image"></div>
+    <div class="spinner-box">
+      <div class="pulse-container">  
+        <div class="pulse-bubble pulse-bubble-1"></div>
+        <div class="pulse-bubble pulse-bubble-2"></div>
+        <div class="pulse-bubble pulse-bubble-3"></div>
+      </div>
+      <div class="please-wait">
+        <h1>Welcome</h1>
+        <h2>Wait a bit</h2>
+      </div>
+    </div>
+  </div>
+  <section class="nav-bar">
+    <a href="{% url 'index' %}">
+      <div class="subtitle">
+        <h1>JM</h1>
+        <h2>Juan F. Muller</h2>
+        <h3>Electrical & Software</h3>
+      </div>
+    </a>
+    <div class="hamburger-menu">
+      <p>MENU</p>
+      <input type="checkbox" class="toggler" id="toggler">
+      <div class="hamburger-button"></div>
+    </div>
+  </section>
+  <div class="hamburger-menu-screen">
+    <ul class="menu-links">
+      <p>MENU</p>
+      <a href="{% url 'index' %}"><li {% if request.path == '/' %} class="active" {% endif %}>Projects</li></a>
+      <a href="{% url 'about' %}"><li {% if 'about' in request.path %} class="active" {% endif %}>About Me</li></a>
+      <a href="{% url 'contact' %}"><li {% if 'contact' in request.path %} class="active" {% endif %}>Contact</li></a>
+      <a href="https://www.linkedin.com/in/juan-muller" target="_blank"><li>LinkedIn</li></a>
+      <a href="https://github.com/juanfmuller" target="_blank"><li>Github</li></a>
+    </ul>
+    <h2>(c) Juan Francisco Muller</h2>
+  </div>
+  <header>
+    {% block header %}{% endblock %}
+  </header>
+  <main>
+    {% block main %}{% endblock %}
+  </main>
+  <footer>
+    <div class="info-section slide-in">
+      <h1>Contact information --</h1>
+      <p>Please feel free to reach out any time of day. If I'm unavailable I will get back to you as soon as possible.</p>
+      <p>Email: <a href="{% url 'contact' %}"><label>jfmuller@miners.utep.edu</label></a></p>
+      <p>Phone: <label>+1 (915) 630-4115</label></p>
+    </div>
+    <div class="info-section slide-in">
+      <h1>Latest projects --</h1>
+      <div class="latest-projects">
+        <ul>
+          <a href="{% url 'swlatinx' %}"><li>SWLatinX</li></a>
+          <a href="{% url 'sorting-algos' %}"><li>Algo Visualizer</li></a>
+          <a href="http://www.juanfmuller.com"><li>Portfolio</li></a>
+        </ul>
+        <ul>
+          <a href="{% url 'xilinx' %}"><li>Xilinx</li></a>
+          <a href="{% url 'micromouse' %}"><li>Micromouse</li></a>
+        </ul>
+      </div>
+    </div>
+    <div class="info-section slide-in">
+      <h1>Follow me --</h1>
+      <div class="latest-projects">
+        <ul>
+          <a href="https://www.linkedin.com/in/juan-muller" target="_blank"><li>LinkedIn</li></a>
+          <a href="https://github.com/juanfmuller" target="_blank"><li>Github</li></a>
+        </ul>
+        <ul>
+          <a href="https://www.instagram.com/juanfmuller/" target="_blank"><li>Instagram</li></a>
+          <a href="https://www.facebook.com/juan.muller.7549185" target="_blank"><li>Facebook</li></a>
+        </ul>
+      </div>
+    </div>
+    <div class="copyright">
+      <h1>JM</h1>
+      <p>(c) 2020 Juan Francisco Muller.</p>
+    </div>
+  </footer>
+  {% block js_file %}{% endblock %}
+  <script src="{% static 'js/master.js' %}"></script>
+</body>
+</html>

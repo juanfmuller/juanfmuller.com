@@ -1,0 +1,63 @@
+{% extends 'root.html' %}
+{% load static %}
+
+{% block page_title %}Projects | Algorithm Visualizer | Juan Muller{% endblock %}
+{% block page_og_title %}Projects | Algorithm Visualizer | Juan Muller{% endblock %}
+{% block page_description %}Sorting algorithm visualizer allows you to see various algorithms in action. I built this to {% endblock %}
+
+{% block extra_head %}
+  <link rel="stylesheet" href="{% static 'projects/css/projects-master.css' %}">
+{% endblock %}
+
+{% block header %}
+{% endblock %}
+
+{% block main%}
+  <div class="title-wrap">
+    <section class="headline">
+      <h3>PROJECT</h3>
+      <h1>Sorting Algorithm Visualizer -- responsive website</h1>
+
+      <h3>MY ROLE</h3>
+      <h2>Website Design</h2>
+      <h2>Code and Development</h2>
+
+      <h3>TOOLS USED</h3>
+      <h2>HTML5</h2>
+      <h2>CSS3</h2>
+      <h2>JavaScript</h2>
+
+      <h3>DATE</h3>
+      <h2>October 2020</h2>
+    </section>
+    <section class="description">
+      <p class="slide-in">As an electrical engineering student, my exposure to computer science concepts has been limited. I have taken it upon myself to learn these concepts
+        through lecture and projects. This project focuses on understanding how sorting algorithms work through vizualisation.
+      </p>
+      <p class="slide-in">The tools I decided to use were HTML and CSS for the responsive front-end and JavaScript for the logic and algorithms. I acomplished this by
+        creating a specified ammount of divs and storing their height in an array. Afterwards, the array would be sorted using one of the specified algorithms. As it 
+        sorted the array, it also set the height of the div accordingly. Moving and coloring the divs at the specified speed.
+      </p>
+      <p class="slide-in">I was able to develop a responsive website that illustrates different sorting algorithms. The number of bars on screen can be changed along with their
+        thickness for better visuals. These two options can be randomized. Then there are two algorithms to choose from, quick sort and bubble sort. The speed the array is sorted
+        can also be changed to better illustrate how the algorithm works.
+      </p>
+    </section>
+  </div>
+  <section class="images">
+    <div class="mobile">
+      <img src="{% static 'projects/img/sorting-landing-mobile.JPG' %}" alt="landing-mobile" class="menu-mobile" class="slide-in">
+      <img src="{% static 'projects/img/sorting-bubble-mobile.JPG' %}" alt="bubblesort-mobile" class="slide-in">
+      <img src="{% static 'projects/img/sorting-quicksort-mobile.JPG' %}" alt="quicksort-mobile" class="slide-in">
+    </div>
+    <img src="{% static 'projects/img/sorting-quicksort.gif' %}" alt="website-gif" class="slide-in">
+    <img src="{% static 'projects/img/sorting-landing.JPG' %}" alt="website-gif" class="slide-in">
+  </section>
+  <section class="launch">
+    <p class="slide-in"><a href="{% url 'sorting-algos-live' %}" target="_blank"><label>Launch Project</label></a> &nbsp; or &nbsp; <a href="https://github.com/juanfmuller" target="_blank"><label>View GitHub</label></a></p>
+  </section>
+  <section class="contact-me projects slide-in">
+    <h2>Want to see more?</h2>
+    <h1><a href="{% url 'micromouse' %}">Next project &#8594;</a></h1>
+  </section>
+{% endblock %}

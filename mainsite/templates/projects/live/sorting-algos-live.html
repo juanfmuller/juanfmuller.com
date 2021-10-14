@@ -1,0 +1,47 @@
+{% load static %}
+<!Doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Sorting Algorithm Visualizer</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="{% static 'projects/live/sorting-algos/style.css' %}">
+</head>
+<body>
+  <main>
+    <section class="title-bar">
+      <h1>Sorting Algorithm Visualizer</h1>
+    </section>
+
+    <section id="array-container">
+    
+    </section>
+
+    <section class="buttons-container">
+      <section class="buttons">
+        <label class="tint" id="button-tint"></label>
+        <span onclick="randomArray()">Randomize Array</span>
+        <span onclick="randomBarWidth()">Randomize Bar Width</span>
+        <span>
+          # of Bars
+          <input type="range" min="4" max="100" value="50" class="slider" id="bars-range">
+        </span>
+
+      </section>
+      <section class="buttons">
+        <label class="tint" id="button-tint"></label>
+        <span onclick="quickSortHelper(array)">Quick Sort</span>
+        <span onclick="bubbleSort()">Bubble Sort</span>
+        <span>
+          Speed
+          <input type="range" min="1" max="400" value="100" class="slider rotate" id="speed-range">
+        </span>
+      </section>
+    </section>
+  </main>
+  <footer>
+    <p> - Created by Juan F. Muller - </p>
+  </footer>
+  <script src="{% static 'projects/live/sorting-algos/script.js' %}"></script>
+</body>
+</html>

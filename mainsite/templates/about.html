@@ -1,0 +1,76 @@
+{% extends 'root.html' %}
+{% load static %}
+
+{% block page_title %}Portfolio | About | Juan Muller{% endblock %}
+{% block page_og_title %}Portfolio | About | Juan Muller{% endblock %}
+{% block page_description %}I'm an electrical engineer with a passion for software. Please read more about me here.{% endblock %}
+
+{% block extra_head %}
+  <link rel="stylesheet" href="{% static 'css/about-style.css' %}">
+{% endblock %}
+
+{% block header %}
+  <div class="name-and-title slide-in">
+    <h2>A FEW WORDS ABOUT ME</h2>
+    <h1>I'm Juan Muller, a multidisiplinary front-end developer who focuses on creating the best code possible. 
+      I specialize in electrical engineering and have found my passion to be in software development.
+      My interests include programming, AI, sales, and real estate. </h1>
+  </div>
+{% endblock %}
+{% block main %}
+  <p class="slide-in">Over the past 5 years, I have been studying the concepts behind electrical engineering and computer science. 
+    I have been able to see how low level programming and hardware development connects, and apply those skills to high level front-end development. 
+    On my spare time, I enjoy video games, researching markets, and hiking.</p>
+  <section class="carousel-wrapper">
+    <section class="carousel">
+      <div class="carousel-container">
+        <img src="{% static 'img/carousel-family.jpg' %}" alt="family" class="carousel-child">
+        <img src="{% static 'img/carousel-preguntas.jpg' %}" alt="preguntas" class="carousel-child">
+        <img src="{% static 'img/carousel-me-river.jpg' %}" alt="me-river" class="carousel-child">
+        <img src="{% static 'img/carousel-ibm-gift.jpg' %}" alt="ibm-gift" class="carousel-child">
+        <img src="{% static 'img/carousel-computers.jpg' %}" alt="computers" class="carousel-child">
+        <img src="{% static 'img/carousel-brother.jpg' %}" alt="brother" class="carousel-child">
+      </div>
+    </section>
+  </section>
+  <section class="highlights">
+    <div class="focus projects slide-in">
+      <h2>WHAT I FOCUS ON</h2>
+      <h3>Web & mobile <label>&nbsp;/&nbsp;</label> Front-end <label>&nbsp;/&nbsp;</label> UI & UX <label>&nbsp;/&nbsp;</label> Responsive design</h3>
+    </div>
+    <div class="tools projects slide-in">
+      <h2>THE TOOLS I USE</h2>
+      <h3>Photoshop <label>&nbsp;/&nbsp;</label> Adobe XD <label>&nbsp;/&nbsp;</label> HTML <label>&nbsp;/&nbsp;</label> CSS <label>&nbsp;/&nbsp;</label> JS <label>&nbsp;/&nbsp;</label> jQuery <label>&nbsp;/&nbsp;</label> AWS</h3>
+    </div>
+  </section>
+  <section class="experience projects slide-in">
+    <h2>EXPERIENCE</h2>
+    <h1>Experience in web development and sales</h1>
+    <p>I've been lucky enough to build relationships with amazing clients, ranging from individual clients, to non-profits, to private companies. For more details head over to my <a href="https://www.linkedin.com/in/juan-muller">LinkedIn</a>.</p>
+    <div class="slide-in experience-info">
+      <div class="experience-child">
+        <h4>IBM</h4>
+        <h5>Technical Solution Specialist</h5>
+        <h5>August 2021 - July 2021</h5>
+      </div>
+      <div class="experience-child">
+        <h4>Southwest LatinX</h4>
+        <h5>Web Developer</h5>
+        <h5>August 2020 - Current</h5>
+      </div>
+      <div class="experience-child">
+        <h4>UTEP</h4>
+        <h5>B.S. Electrical Engineering</h5>
+        <h5>August 2017 - Current</h5>
+      </div>
+    </div>
+  </section>
+  <section class="contact-me projects slide-in">
+    <h2>Like what you see?</h2>
+    <a href="{% url 'contact' %}"><h1>Let's work together Ξ</h1></a>
+  </section>
+{% endblock %}
+ 
+{% block js_file %}
+  <script src="{% static 'css/about-script.js' %}"></script>
+{% endblock %}

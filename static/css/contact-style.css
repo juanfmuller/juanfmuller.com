@@ -1,0 +1,90 @@
+#map{
+  margin-top: 90px;
+  width: 100%;
+  height: 300px;
+}
+.gm-style-cc { 
+  display: none; 
+}
+
+main{
+  max-width: 1600px;
+}
+
+.contact h1{
+  margin: 15px 0;
+}
+.contact p{
+  color: rgba(0, 2, 18, .5);
+  font-weight: 600;
+}
+
+.contact-form{
+  margin: 0 15px 50px 15px;
+}
+.contact-form label{
+  width: 100%;
+  font-size: .8rem;
+  font-weight: 600;
+  color: rgba(0, 2, 18, .5);
+  font-family: 'Manrope';
+}
+.contact-form input, .contact-form select{
+  width: 100%;
+  height: 40px;
+  color: rgba(0, 2, 18, 1);
+  font-size: 1.1rem;
+  font-weight: 600;
+  font-family: 'Manrope';
+  border: none;
+  border-bottom: 2px solid rgba(0, 2, 18, .1);
+  background-image:none;
+  background-color:transparent;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  margin: 10px 0 30px 0;
+}
+.contact-form select{
+  border: 2px solid rgba(0, 2, 18, .1);
+  padding: 0 10px;
+}
+.contact-form input::placeholder{
+  color: rgba(0, 2, 18, 1);
+}
+button, input[type="submit"], input[type="reset"] {
+	background: none;
+	color: inherit;
+	border: none;
+	padding: 10px 0;
+	font: inherit;
+	cursor: pointer;
+  outline: inherit;
+  font-weight: 800;
+  font-size: 1.1rem;
+}
+
+@media only screen and (min-width: 1024px) {
+  main{
+    margin: 120px 60px;
+    display: flex;
+    justify-content: space-evenly;
+  }
+  .contact-form, .contact{
+    width: 40%;
+  }
+  .contact h1{
+    font-size: 3rem !important;
+    line-height: 3.3rem;
+  }
+  .contact p{
+    font-size: 1.3rem;
+    margin: 40px 0;
+  }
+}
+
+@media only screen and (min-width: 1700px) {
+  main{
+    margin: 120px auto;
+  }
+}

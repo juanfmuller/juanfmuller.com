@@ -1,0 +1,63 @@
+{% extends 'root.html' %}
+{% load static %}
+
+{% block page_title %}Projects | Micromouse | Juan Muller{% endblock %}
+{% block page_og_title %}Projects | Micromouse | Juan Muller{% endblock %}
+{% block page_description %}Micromouse is a competition sponsored by IEEE where an atonomous robot has to be built and coded to find the center of a maze.{% endblock %}
+
+{% block extra_head %}
+  <link rel="stylesheet" href="{% static 'projects/css/projects-master.css' %}">
+{% endblock %}
+
+{% block header %}
+{% endblock %}
+
+{% block main%}
+    <div class="title-wrap">
+      <section class="headline">
+        <h3>PROJECT</h3>
+        <h1>Micromouse -- maze solving robot</h1>
+
+        <h3>MY ROLE</h3>
+        <h2>Software development</h2>
+        <h2>PID control</h2>
+        <h2>Floodfill</h2>
+        <h2>Soldering</h2>
+
+        <h3>TOOLS USED</h3>
+        <h2>Arduino</h2>
+        <h2>Diverse sensors</h2>
+        <h2>PCB</h2>
+
+        <h3>DATE</h3>
+        <h2>January 2020</h2>
+      </section>
+      <section class="description">
+        <p class="slide-in">Micromouse is a competition sponsored by the Institute of Electrical and Electronics Engineers (IEEE), in which teams of 4 people compete to see who's
+          robot will reach the center a maze first. We all started with the same printed circuit board and had to solder all the necessary components.For the microcontroller we 
+          used an Arduino, which allwed us to develop the software using C++ and external libraries. 
+        </p>
+        <p class="slide-in">For the robot to work correcty there were three main parts which had to be achieved. First the robot needed to move straight in between the walls, to do
+          this we used a PID controller. The robot also needed to be able to avoid objects using the infrared sensors. Lastly, the robot had to remember where it had been and this was done
+          with a floodfill algorithm.
+        </p>
+        <p class="slide-in">Working alongside three peers, we were able to construct the robot and get it to run through the maze. I was in charge of developing the PID control which I
+          developed using the wheel's encoders and an external library. Unfortunately, the competition was cut short due to COVID-19 and we were unable to put it to the race, however, the learning
+          experience was great.
+        </p>
+      </section>
+    </div>
+    <section class="images">
+      <img src="{% static 'projects/img/micromouse-robot.jpg' %}" alt="micromouse-robot">
+      <div class="mobile">
+
+      </div>
+    </section>
+    <section class="launch">
+      <p class="slide-in"><a href="https://github.com/juanfmuller" target="_blank"><label>View GitHub</label></a></p>
+    </section>
+    <section class="contact-me projects slide-in">
+      <h2>Want to see more?</h2>
+      <h1><a href="{% url 'xilinx' %}">Next project &#8594;</a></h1>
+    </section>
+{% endblock %}

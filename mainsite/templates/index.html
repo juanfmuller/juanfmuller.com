@@ -1,0 +1,77 @@
+{% extends 'root.html' %}
+{% load static %}
+
+{% block page_title %}Portfolio | Home | Juan Muller{% endblock %}
+{% block page_og_title %}Portfolio | Home | Juan Muller{% endblock %}
+{% block page_description %}Over the past five years I have been studying electrical engieering along 
+with software development. I've worked on projects from circuit design to user interface development.{% endblock %}
+
+{% block extra_head %}
+  <link rel="stylesheet" href="{% static 'css/index-style.css' %}">
+{% endblock %}
+
+{% block header %}
+  <img src="{% static 'img/headshot.png' %}">
+  <div class="intro-info">
+    <div class="name-and-title slide-in">
+      <h2>JUAN FRANCISCO MULLER</h2>
+      <h1>Electrical engineer & Software developer</h1>
+    </div>
+    <p class="slide-in">Over the past five years I have been studying electrical engieering along with software development. I've worked on projects from circuit design to user interface development.</p>
+    <p class="slide-in"><a href="#scrolldown"><label class="underline-hover">View Projects</label></a> &nbsp; or &nbsp; <a href="{% url 'about' %}"><label class="underline-hover">Read About Me</label></a></p>
+  </div>
+  <span class="scroll-btn">
+    <a href="#scrolldown">
+      <span class="mouse" id="scrolldown">
+        <span>
+        </span>
+      </span>
+    </a>
+  </span>
+{% endblock %}
+{% block main %}
+  <section class="software projects">
+    <h2 class="slide-in">SELECTED PROJECTS</h2>
+    <h1 class="slide-in">Software</h1>
+    <div class="project-list">
+      <div class="project-item slide-in swlatinx">
+        <a href="{% url 'swlatinx' %}"><div class="overlay-hover"></div></a>
+        <h4>September, 2020</h4>
+        <h3>SWLatinX -- responsive website design</h3>
+        <h4>View Project Ξ</h4>
+      </div>
+      <div class="project-item slide-in algorithm-visualizer">
+        <a href="{% url 'sorting-algos' %}"><div class="overlay-hover"></div></a>
+        <h4>October, 2020</h4>
+        <h3>Sorting Algorithm Visualizer -- responsive website</h3>
+        <h4>View Project Ξ</h4>
+      </div>
+      <div class="project-item slide-in micromouse">
+        <a href="{% url 'micromouse' %}"><div class="overlay-hover"></div></a>
+        <h4>January, 2020</h4>
+        <h3>Micromouse -- maze solving robot</h3>
+        <h4>View Project Ξ</h4>
+      </div>
+    </div>
+  </section>
+  <section class="electrical projects">
+    <h2 class="slide-in">SELECTED PROJECTS</h2>
+    <h1 class="slide-in">Electrical</h1>
+    <div class="project-list">
+      <div class="project-item slide-in xilinx">
+        <a href="{% url 'xilinx' %}"><div class="overlay-hover"></div></a>
+        <h4>April, 2020</h4>
+        <h3>Xilinx -- digital circuit design</h3>
+        <h4>View Project Ξ</h4>
+      </div>
+    </div>
+  </section>
+  <section class="contact-me projects slide-in">
+    <h2>Like what you see?</h2>
+    <a href="{% url 'contact' %}"><h1>Let's work together Ξ</h1></a>
+  </section>
+{% endblock %}
+
+{% block js_file %}
+  <script src="{% static 'js/index-script.js' %}"></script>
+{% endblock %}

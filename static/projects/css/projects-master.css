@@ -1,0 +1,140 @@
+main{
+  margin: 0 15px;
+  max-width: 1600px;
+}
+.headline{
+  margin: 120px 0 50px 0;
+}
+.headline h3{
+  font-weight: 500;
+  font-size: 1rem;
+  color: rgba(0, 2, 18, .5);
+  letter-spacing: 3px;
+  margin: 30px 0 5px 0;
+}
+.headline h1{
+  font-weight: 800;
+  font-size: 1.85rem;
+  line-height: 2.25rem;
+  font-stretch: wider;
+}
+.headline h2{
+  font-weight: 600;
+  font-size: 1.15rem;
+  line-height: 1.5rem;
+  letter-spacing: 3px;
+}
+
+.description p{
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: rgba(0, 2, 18, .5);
+  margin-bottom: 25px;
+}
+
+.images{
+  width: 100%;
+}
+.images img{
+  width: 100%;
+  height: auto;
+  margin: 20px 0;
+}
+.mobile{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+.mobile img{
+  width: 47%;
+}
+.menu-mobile{
+  width: 55% !important;
+}
+
+.launch{
+  width: 100%;
+  text-align: center;
+}
+.launch p{
+  margin-top: 20px;
+}
+.launch label{
+  font-weight: 800;
+}
+.launch label:hover{
+  text-decoration: underline;
+}
+
+.contact-me{
+  margin: 80px 0 0 0 ;
+  padding: 80px 0;
+  border-top: 1px solid rgba(0, 0, 0, .1);
+}
+
+@media only screen and (min-width: 1024px) {
+  .mobile{
+    width: 70%;
+    margin: 0 auto;
+    justify-content: space-between;
+  }
+  .mobile img{
+    width: 30%;
+  }
+  .menu-mobile{
+    width: 30% !important;
+  }
+  .launch{
+    width: 100%;
+    text-align: center;
+    margin: 80px 0;
+  }
+  .launch p{
+    margin-top: 20px;
+    font-size: 2rem;
+  }
+  .contact-me{
+    padding-bottom: 120px;
+    text-align: center;
+  }
+  .contact-me h2{
+    font-size: 1.2rem;
+  }
+  .contact-me h1{
+    font-size: 4.2rem;
+    line-height: 5rem !important;
+    width: fit-content;
+    margin: 0 auto;
+  }
+  .title-wrap{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin: 200px auto 50px auto;
+    width: 100%;
+    min-height: calc(100vh - 200px);
+  }
+  .headline{
+    width: 35%;
+    margin: 0;
+  }
+  .headline h1{
+    font-size: 3rem;
+    line-height: 3.5rem;
+  }
+  .description{
+    width: 60%;
+    margin-top: 55px;
+  }
+  .description p{
+    font-size: 1.3rem;
+  }
+}
+
+@media only screen and (min-width: 1630px) {
+  main{
+    margin: 0 auto;
+  }
+
+}

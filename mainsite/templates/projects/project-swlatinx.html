@@ -1,0 +1,63 @@
+{% extends 'root.html' %}
+{% load static %}
+
+{% block page_title %}Projects | SWLatinX | Juan Muller{% endblock %}
+{% block page_og_title %}Projects | SWLatinX | Juan Muller{% endblock %}
+{% block page_description %}Southwest LatinX needed their website redone. Here is a peek at the results and how I went about doing so.{% endblock %}
+
+{% block extra_head %}
+  <link rel="stylesheet" href="{% static 'projects/css/projects-master.css' %}">
+{% endblock %}
+
+{% block header %}
+{% endblock %}
+
+{% block main%}
+  <div class="title-wrap">
+    <section class="headline">
+      <h3>CASE STUDY</h3>
+      <h1>SWLatinX - Responise wesbite development</h1>
+
+      <h3>MY ROLE</h3>
+      <h2>Website Design</h2>
+      <h2>Code and Development</h2>
+
+      <h3>CLIENT</h3>
+      <h2>Southwest LatinX</h2>
+
+      <h3>DATE</h3>
+      <h2>September 2020</h2>
+    </section>
+    <section class="description">
+      <p class="slide-in">Southwest LatinX is a non-porift organization in the El Paso region who helps underpriviliged students have a successful eduaction. As they were expanding they needed
+        a complete overhaul of their website. They were looking for a new design and user experience, which spoke to their authenticity while remaining professional. 
+        This included a blog and a way for members to sign up for a news-letter. 
+      </p>
+      <p class="slide-in">I was able to take thier story and develop a website which served many pourposes. It's a way for students to register to events using PayPal, a way to register for a news-letter
+        to recieve the most up to date information, a blog, and finally the front face of the organization. 
+      </p>
+      <p class="slide-in">Working alongside the lead content creator and the director of the organization, we decided to make a website with a simple inerface which could appeal to both students and
+        parents. Formerly, they were using Wix Wesbite Creator, and I moved us to an HTML, CSS, and JS front-end running on a headless CMS for easy edits. I had a lot of creative 
+        freedom for this project, however, the hardest part was using the adequate 3rd party services for a manageable website. I ended up utilizing PageClip for the news-letter,
+        PayPal for event registrtaion, Vapid as the CMS, AWS Lightsail for hosting services, and Google Domains for the domain registration.
+      </p>
+    </section>
+  </div>
+  <section class="images">
+    <img src="{% static 'projects/img/swlatinx-loader-page.JPG' %}" alt="website-loader" class="slide-in">
+    <img src="{% static 'projects/img/swlatinx-landing-page.JPG' %}" alt="landing-page" class="slide-in">
+    <img src="{% static 'projects/img/swlatinx-news-letter.JPG' %}" alt="news-letter" class="slide-in">
+    <div class="mobile">
+      <img src="{% static 'projects/img/swlatinx-menu-mobile.JPG' %}" alt="menu-mobile" class="menu-mobile" class="slide-in">
+      <img src="{% static 'projects/img/swlatinx-donate-mobile.JPG' %}" alt="donate-mobile" class="slide-in">
+      <img src="{% static 'projects/img/swlatinx-blog-mobile.JPG' %}" alt="blog-mobile" class="slide-in">
+    </div>
+  </section>
+  <section class="launch">
+    <p class="slide-in"><a href="http://swlatinx.org/" target="_blank"><label>Launch Project</label></a> &nbsp; or &nbsp; <a href="https://github.com/juanfmuller" target="_blank"><label>View GitHub</label></a></p>
+  </section>
+  <section class="contact-me projects slide-in">
+    <h2>Want to see more?</h2>
+    <h1><a href="{% url 'sorting-algos' %}">Next project &#8594;</a></h1>
+  </section>
+{% endblock %}

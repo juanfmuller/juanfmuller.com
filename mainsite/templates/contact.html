@@ -1,0 +1,53 @@
+{% extends 'root.html' %}
+{% load static %}
+
+{% block page_title %}Portfolio | Contact | Juan Muller{% endblock %}
+{% block page_og_title %}Portfolio | Contact | Juan Muller{% endblock %}
+{% block page_description %}Welcome to my portfolio. Please reach out for anythin at all.{% endblock %}
+
+{% block extra_head %}
+  <link rel="stylesheet" href="https://s.pageclip.co/v1/pageclip.css" media="screen">
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+  <script
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC1dlvkmgkmLSAHWig1RKEZcoXUqumizjo&map_ids=fd7310634cc1c5ea&callback=initMap"
+    defer
+  ></script>
+  <link rel="stylesheet" href="{% static 'css/contact-style.css' %}">
+{% endblock %}
+
+{% block header %}
+  <div id="map"></div>
+{% endblock %}
+{% block main %}
+  <section class="contact projects slide-in">
+    <h2>CONTACT</h2>
+    <h1>Get in touch -- let's work together</h1>
+    <p>Got a project? Send me a message if you want to work together.</p>
+  </section>
+  <section class="contact-form slide-in">
+    <form action="https://send.pageclip.co/shg7Qi4LW0ANSe7Jz126PEI0HXafYB50/contact-me" class="pageclip-form" method="post">
+      <label>Your Name</label>
+      <input type="text" name="name" placeholder="What's your name?">
+      <label>Your Email</label>
+      <input type="text" name="email" placeholder="What's your email address?">
+      <label>Service</label>
+      <select name="service-type">
+        <option value="" disabled selected>What are you interested in?</option>
+        <option value="Need help with only one project.">Need help with only one project.</option>
+        <option value="Have an internship opportunity.">Have an internship opportunity.</option>
+        <option value="Want to hire me full-time.">Want to hire me full-time.</option>
+        <option value="Just wanted to say hi!">Just wanted to say hi!</option>
+      </select>
+      <label>Message</label>
+      <input type="text" name="message" placeholder="What's your message?">
+      <button type="submit" class="pageclip-form__submit">
+        <span>&#9993; Submit Message</span>
+      </button>
+    </form>
+  </section>
+{% endblock %}
+
+{% block js_file %}
+  <script src="{% static 'js/contact-script.js' %}"></script>
+  <script src="https://s.pageclip.co/v1/pageclip.js" charset="utf-8"></script>
+{% endblock %}

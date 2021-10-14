@@ -1,0 +1,178 @@
+header{
+  margin: 120px 15px 0 15px;
+  position: relative;
+}
+header h2{
+  font-weight: 500;
+  font-size: 1rem;
+  color: rgba(0, 2, 18, .5);
+  letter-spacing: 3px;
+}
+header h1{
+  font-weight: 800;
+  font-size: 1.85rem;
+  line-height: 2.25rem;
+  font-stretch: wider;
+  margin: 10px 0 15px 0;
+}
+
+main{
+  margin: 50px 15px;
+  text-align: left;
+  max-width: 1600px;
+}
+main p{
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: rgba(0, 2, 18, .5);
+}
+
+.carousel-wrapper{
+  width: 100%;
+}
+.carousel{
+  width: 100%;
+  height: 0;
+  padding-bottom: 56.25%;
+  margin: 80px 0;
+  overflow: hidden;
+  position: relative;
+}
+.carousel-container{
+  width: 600%;
+  display: flex;
+  flex-wrap: nowrap;
+  transition: transform .5s;
+}
+.carousel-child{
+  width: 16.7%;
+  height: 100%;
+  padding: 0 .15%;
+  filter: grayscale(1);
+}
+
+.projects{
+  margin: 50px 0;
+}
+.projects h3{
+  margin-top: 15px;
+  font-size: 1.1rem;
+  line-height: 1.3rem;
+}
+.projects h1{
+  margin-top: 15px;
+}
+.projects label{
+  color: rgba(0, 2, 18, .3);
+}
+
+.tools{
+  border-bottom: 1px solid rgba(0, 2, 18, .1);
+  padding-bottom: 100px;
+}
+
+.experience{
+  margin: 100px 0 100px 0;
+}
+.experience p{
+  margin: 15px 0 50px 0;
+}
+.experience-child{
+  margin-top: 15px;
+}
+.experience-child h4, .experience-child h5{
+  font-size: 1.1rem;
+  line-height: 2rem;
+}
+.experience-child h5{
+  color: rgba(0, 2, 18, .5);
+}
+
+.contact-me{
+  border-top: 1px solid rgba(0,0,0,0.1);
+  padding-top: 50px;
+}
+
+
+@media only screen and (min-width: 1024px) {
+  header{
+    margin: 200px 60px 0 60px;
+  }
+  header h2{
+    font-size: 1.2rem !important;
+    text-align: center;
+  }
+  header h1{
+    font-size: 3rem !important;
+    line-height: 3.3rem;
+    margin: 25px auto 30px auto;
+    width: 80%;
+    text-align: center;
+  }
+  main{
+    margin: 50px auto;
+  }
+  main p{
+    line-height: 2.2rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 0 auto 30px auto;
+    width: 70%;
+    text-align: center;
+  }
+  .carousel-wrapper{
+    width: 70%;
+    margin: 0 auto;
+  }
+  .highlights{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    border-bottom: 1px solid rgba(0, 2, 18, .1);
+  }
+  .tools, .focus{
+    width: 30%;
+    border: none;
+  }
+  .projects h3{
+    text-align: center;
+    font-size: 1.5rem;
+    line-height: 1.75rem;
+  }
+  .projects h1, .projects h2, .projects p{
+    text-align: center;
+  }
+  .projects h2{
+    font-size: 1.2rem !important;
+  }
+  .projects h1{
+    font-size: 3rem !important;
+    line-height: 3.3rem;
+    margin: 25px 0 30px 0;
+  }
+  .projects p{
+    margin: 20px auto;
+  }
+  .experience-info{
+    margin: 0 auto;
+    width: fit-content;
+  }
+  .experience-child{
+    margin-top: 50px;
+  }
+  .experience-child h4, .experience-child h5{
+    font-size: 1.3rem;
+    line-height: 2.5rem;
+  }
+  .contact-me{
+    padding: 120px 0;
+    text-align: center;
+    border-top: 1px solid rgba(0,0,0,0.1);
+  }
+  .contact-me h1{
+    font-size: 4.2rem !important;
+    line-height: 5rem;
+    margin: 0 auto; 
+    width: fit-content;
+  }
+}

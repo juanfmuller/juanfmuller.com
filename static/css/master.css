@@ -1,0 +1,360 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html { 
+  scroll-behavior: smooth;
+}
+body{
+  font-family: 'Manrope';
+  background-color: rgba(253, 253, 253, .8);
+  color: rgba(255, 255, 255, .5);
+}
+a{
+  color: inherit;
+  text-decoration: none;
+}
+
+.loading-screen{
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 98;
+  transition: transform .7s;
+  transform: translate(0, 0);
+  background-color: rgba(4, 11, 20, 1);
+}
+.loading-image{
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(4, 11, 20, 0.5);
+  background-image: url('../img/loading-image-large.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-blend-mode: multiply;
+}
+.please-wait{
+  position: relative;
+  bottom: -100px;
+  transition: bottom .3s;
+}
+.please-wait h1{
+  margin: 0 15px;
+  font-size: 1rem;
+}
+.please-wait h2{
+  margin: 0 15px;
+  font-weight: 800;
+  font-size: 1.75rem;
+}
+.pulse-container {
+  width: 120px;
+  margin: calc(50vh - 60px) auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.pulse-bubble {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, .5);
+}
+.pulse-bubble-1 {
+    animation: pulse .4s ease 0s infinite alternate;
+}
+.pulse-bubble-2 {
+    animation: pulse .4s ease .2s infinite alternate;
+}
+.pulse-bubble-3 {
+    animation: pulse .4s ease .4s infinite alternate;
+}
+@keyframes pulse {
+  from {
+    opacity: 1;
+    transform: scale(1);
+  }
+  to {
+    opacity: .25;
+    transform: scale(.75);
+  }
+}
+
+.nav-bar{
+  opacity: 0;
+  transition: all .5s, background-color .1s;
+  width: 100%;
+  height: 90px;
+  position: fixed;
+  top: 0;
+  z-index: 98;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+.nav-bar .subtitle{
+  width: 250px;
+}
+.nav-bar .subtitle h1{
+  text-align: center;
+  font-size: 1.5rem;
+  width: 50px;
+  height: 50px;
+  line-height: 44px;
+  border: 3px solid rgba(255, 255, 255, .5);
+  border-radius: 999px;
+  font-weight: 800;
+  margin: 0 15px;
+  float: left;
+}
+.nav-bar .subtitle h2{
+  font-weight: 800;
+  font-size: 1.5rem;
+  font-stretch: 200%;
+}
+.nav-bar .subtitle h3{
+  font-weight: 600;
+  font-size: .75rem;
+  letter-spacing: 2px;
+}
+.hamburger-menu{
+  opacity: 0;
+  height: 30px;
+  width: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  position: relative;
+  position: fixed;
+  top: 30px;
+  right: 15px;
+  z-index: 99;
+}
+.hamburger-menu p{
+  width: 70%;
+  line-height: 30px;
+  font-weight: 800;
+  font-size: .8rem;
+  letter-spacing: 2px;
+}
+.hamburger-button{
+  width: 22px;
+  height: 3px;
+  background-color: black;
+  position: relative;
+  margin: 6px 0;
+  top: 0;
+  transition: transform .5s, top .5s;
+}
+.hamburger-button::before{
+  content: '';
+  width: 22px;
+  height: 3px;
+  background-color: inherit;
+  position: absolute;
+  top: 7px;
+  transition: transform .5s, top .5s, opacity .2s;
+}
+.hamburger-button::after{
+  content: '';
+  width: 22px;
+  height: 3px;
+  background-color: inherit;
+  position: absolute;
+  top: 14px;
+  transition: transform .5s, top .5s;
+}
+.hamburger-menu-screen{
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 5;
+  background-color: rgba(4, 11, 20, 0.98);
+  transform: translate(0, -110%);
+  transition: transform .7s;
+}
+.menu-links{
+  width: fit-content;
+  height: auto;
+  list-style: none;
+  position: absolute;
+  left: 50vw;
+  top: 50vh;
+  transform: translate(-50%, -50%);
+  color: rgba(255, 255, 255, .5);
+  text-align: center;
+}
+.menu-links li{
+  font-size: 2rem;
+  font-weight: 800;
+  line-height: 3rem;
+  transition: color .5s;
+}
+.menu-links li:hover{
+  color: #fff;
+}
+.menu-links p{
+  line-height: 3rem;
+  letter-spacing: 3px;
+  font-size: .9rem;
+}
+.menu-links .active{
+  color: rgba(255, 255, 255, 1);
+}
+.hamburger-menu-screen h2{
+  position: absolute;
+  bottom: 15px;
+  width: 100%;
+  text-align: center;
+  color: rgba(255, 255, 255, .5);
+  font-size: .9rem;
+  font-weight: 400;
+}
+.toggler{
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 0;
+  right: -3px;
+  z-index: inherit;
+  opacity: 0;
+}
+.toggler:checked ~ .hamburger-button{
+  transform: rotate(45deg);
+  top: 5px;
+}
+.toggler:checked ~ .hamburger-button:before{
+  opacity: 0;
+}
+.toggler:checked ~ .hamburger-button:after{
+  transform: rotate(90deg);
+  top: 0;
+}
+
+.projects h2{
+  font-weight: 500;
+  font-size: 1rem;
+  color: rgba(0, 2, 18, .5);
+  letter-spacing: 3px;
+}
+.projects h1{
+  font-weight: 800;
+  font-size: 1.85rem;
+  line-height: 2.25rem;
+}
+.projects{
+  margin: 80px 15px;
+}
+
+.contact-me h1{
+  transition: border .5s;
+  border-bottom: 5px solid transparent;
+}
+.contact-me h1:hover{
+  border-bottom: 5px solid black;
+}
+
+
+footer{
+  margin: 0 15px;
+  border-top: 1px solid rgba(0,0,0,0.1);
+  padding-top: 30px;
+  max-width: 1600px;
+}
+footer a:hover{
+  text-decoration: underline;
+}
+.info-section{
+  width: 100%;
+  margin: 50px 0;
+}
+.info-section h1{
+  font-size: 1.15rem;
+  font-weight: 800;
+}
+.info-section p{
+  font-size: 1rem;
+  font-weight: 600;
+  color: rgba(0, 0, 0, .5);
+  margin: 20px 0;
+}
+.info-section label{
+  color: #000;
+  font-weight: 600;
+}
+.info-section ul{
+  width: 150px;
+  list-style: none;
+  margin-top: 20px;
+}
+.info-section ul li{
+  line-height: 1.6rem;
+  font-weight: 500;
+}
+.latest-projects{
+  display: flex !important;
+  flex-wrap: nowrap
+}
+
+.copyright{
+  width: 100%;
+  display: flex;
+  height: 100px;
+  justify-content: center;
+  align-content: center;
+}
+.copyright h1{
+  text-align: center;
+  font-size: 1.5rem;
+  width: 50px;
+  height: 50px;
+  line-height: 44px;
+  border: 3px solid rgba(0, 0, 0, .3);
+  color: rgba(0, 0, 0, .3);
+  border-radius: 999px;
+  font-weight: 800;
+}
+.copyright p{
+  line-height: 50px;
+  padding-left: 15px;
+  font-weight: 600;
+  font-size: .9rem;
+  color: rgba(0, 0, 0, .5);
+}
+
+
+@media only screen and (min-width: 1024px) {
+  .nav-bar .subtitle{
+    margin: 0 75px;
+  }
+  .hamburger-menu{
+    right: 75px;
+  }
+  .menu-links li{
+    font-size: 4rem;
+    font-weight: 800;
+    line-height: 5rem;
+  }
+  .contact-me a{
+    margin: 0 auto;
+  }
+  footer{
+    margin: 0 75px;
+  }
+}
+
+@media only screen and (min-width: 1700px) {
+  footer{
+    margin: 0 auto;
+  }
+}
